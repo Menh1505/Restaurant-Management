@@ -125,6 +125,73 @@ dist
 # yarn v2
 .yarn/cache
 .yarn/unplugged
+
+# General node_modules (for both client and server)
+node_modules/
+**/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/server/.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build directories
+client/build/
+server/build/
+client/dist/
+server/dist/
+
+# Cache directories for client
+client/.next/
+client/out/
+client/.cache/
+client/.eslintcache
+
+# Cache directories for server
+server/.cache/
+server/.nuxt/
+server/tmp/
+
+# Ignore editor directories and settings
+.vscode/
+.idea/
+/server/.idea/
+/server/.idea
+
+# Test coverage reports
+coverage/
+
+# Linting output
+.eslintcache
+
+# Ignore the public/runtime generated files (optional)
+client/public/assets/
+client/public/static/
+
+# Temporary files and backup files
+*.bak
+*.tmp
+*.swp
+*.swo
+
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
