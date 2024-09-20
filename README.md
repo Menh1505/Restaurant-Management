@@ -24,3 +24,30 @@ npm run start:server
 ```bash
 npm start
 ```
+
+#Working folders
+/restaurant-management-project
+│
+├── /client                   # Folder for React (front end)
+│   ├── /public
+│   ├── /src
+│   ├── package.json
+│   └── .env
+│
+├── /server                   # Folder for Express.js (back end)
+│   ├── /src
+│   ├── /controllers
+│   ├── /models
+│   ├── /routes
+│   ├── package.json
+│   └── .env
+│
+├── /scripts                  # Scripts use for both front end and back end
+│   └── deploy.sh             # Example: script autos deploy
+│
+├── /config                   # Common configuration for client and server
+│   └── .eslintrc.json        # Ex: Common ESLint configuration
+│
+├── .gitignore                # Files/directories that don't need to be committed to Git
+├── README.md                 # Project doc
+└── package.json              # Manage scripts run for both client and server
