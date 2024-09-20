@@ -5,11 +5,14 @@
     "server"
   ],
   "scripts": {
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "install": "npm run install:client && npm run install:server",
     "start:client": "npm start --prefix client",
     "start:server": "npm start --prefix server",
     "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\""
   },
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.5.1"
   }
 }
