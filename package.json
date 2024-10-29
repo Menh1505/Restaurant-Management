@@ -13,6 +13,7 @@
     "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\""
   },
   "devDependencies": {
+    "@babel/node": "^7.26.0",
     "concurrently": "^6.5.1"
   }
 }

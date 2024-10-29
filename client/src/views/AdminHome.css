@@ -1,0 +1,517 @@
+/* Admin home */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Irish Grover:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument Serif:wght@400&display=swap");
+
+p {
+  margin: 0;
+}
+
+.admin-home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1920px;
+  height: 2200px;
+  border: 10px solid rgba(245, 245, 245, 1);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.89);
+}
+.group-845 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.group-4496 {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  box-sizing: border-box;
+}
+.pencil-change-edit-modify-pencil-write-writing {
+  position: absolute;
+  top: 66px;
+  left: 1458px;
+  width: 50px;
+  height: 50px;
+}
+
+.group-925 {
+  position: absolute;
+  top: 68px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1753px;
+  height: 120px;
+  box-sizing: border-box;
+}
+.dall-e20241018233857-arestaurant-logo-featuring-the-name-the-boy-sthe-design-should-have-amodern-and-elegant-style-with-aclean-minimalistic-look-the-logo-should-i {
+  width: 120px;
+  height: 100%;
+}
+.user-circle-single-circle-geometric-human-person-single-user {
+  width: 50px;
+  height: 50px;
+}
+
+.the-boy-s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 20px;
+  line-height: 90%;
+  font-family: Irish Grover, display;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    2px 2px 2px rgba(245, 245, 245, 1);
+}
+
+.frame-46 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  padding: 30px 89px 25px 99px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(255, 255, 255, 1);
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.booktable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.group-4500 {
+  width: 130px;
+  height: fit-content;
+  padding: 19px 13px 16px;
+  box-sizing: border-box;
+  background-color: rgba(244, 157, 17, 1);
+}
+.revenue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.user-circle-single-circle-geometric-human-person-single-user {
+  width: 50px;
+  height: 50px;
+  margin-left: 500px;
+}
+
+.rectangle-150 {
+  width: 1630px;
+  height: 1400px;
+}
+
+.group-50 {
+  width: 1609.23px;
+  height: 250px;
+}
+
+.frame-70 {
+  position: absolute;
+  top: 1761px;
+  left: -2px;
+  width: 100%;
+  height: 438px;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish Grover:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial Script:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inknut Antiqua:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inclusive Sans:wght@400&display=swap");
+
+p {
+  margin: 0;
+}
+
+.admin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1440px;
+  height: 1174px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.group-814 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.frame-88 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.group-4497 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 51px 26px 50.27px 1181px;
+  box-sizing: border-box;
+}
+.group-4500 {
+  width: 120px;
+  height: fit-content;
+  padding: 1px 5.5px 0.15px 6px;
+  box-sizing: border-box;
+  background-color: rgba(244, 157, 17, 1);
+  margin-right: 50px;
+}
+.return {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.user-circle-single-circle-geometric-human-person-single-user {
+  width: 40px;
+  height: 40px;
+  margin-right: 90px;
+}
+
+.rectangle-218 {
+  position: absolute;
+  top: 45px;
+  left: 32px;
+  width: 40px;
+  height: 40px;
+}
+
+.frame-95 {
+  position: absolute;
+  top: 30px;
+  left: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 733px;
+  height: 75px;
+  border: 1px solid rgba(245, 245, 245, 1);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(255, 255, 255, 1);
+}
+.frame-97 {
+  position: absolute;
+  top: 0px;
+  left: 349px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 193px;
+  height: 100%;
+  padding: 14px 44px 61px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.bookingtable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.group-802 {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.frame-971 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.frame-98 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  padding: 34px 67px 41px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1/0%);
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.frame-972 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  padding: 8px 80px 67px 69px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1/0%);
+}
+.pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+  margin-left: 320px;
+}
+
+.the-boy-s {
+  position: absolute;
+  top: 45px;
+  left: 143.06px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Irish Grover, display;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    2px 2px 2px rgba(245, 245, 245, 1);
+}
+
+.frame-90 {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 874px;
+}
+
+.frame-103 {
+  position: absolute;
+  top: 1024px;
+  left: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 480px;
+  height: 150px;
+  padding: 0px 166px 150px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.ho-tro-khach-hang {
+  color: rgba(244, 157, 17, 1);
+  font-size: 14px;
+  line-height: 321%;
+  font-family: IM FELL English SC, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+.frame-102 {
+  position: absolute;
+  top: 1024px;
+  left: 474px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 491px;
+  height: 150px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.frame-111 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.contac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(244, 157, 17, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Imperial Script, handwriting;
+  font-weight: 400;
+  margin-left: 250px;
+
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.frame-101 {
+  position: absolute;
+  top: 1024px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 477px;
+  height: 150px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.opening {
+  position: absolute;
+  top: 22.5px;
+  left: 3.54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(244, 157, 17, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Inknut Antiqua, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.frame-110 {
+  position: absolute;
+  top: 0px;
+  left: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 373px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.monday-saturday-09am-09 {
+  color: rgba(245, 245, 245, 1);
+  font-size: 14px;
+  line-height: 321%;
+  font-family: Inclusive Sans, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
