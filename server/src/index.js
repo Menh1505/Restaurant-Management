@@ -1,9 +1,20 @@
 // server/index.js
 const express = require('express');
 const app = express();
+const cors = require('cors');
 app.use(express.json());
+
+app.use(cors());
+app.use(express.json());
+
+// Hoặc cấu hình CORS cụ thể
+app.use(cors({
+  origin: 'http://localhost:5000',
+  credentials: true
+}));
 // Set a port
 const PORT = process.env.PORT || 5000;
+
 
 // Basic route to check server status
 app.get('/', (req, res) => {

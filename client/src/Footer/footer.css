@@ -1,0 +1,123 @@
+/* Frame 142 */
+
+@import url("https://fonts.googleapis.com/css2?family=Inknut Antiqua:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inclusive Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial Script:wght@400&display=swap");
+
+p {
+  margin: 0;
+}
+
+.frame-142 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1440px;
+  height: 150px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+
+}
+.group-6104 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.frame-101 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.opening {
+  position: absolute;
+  top: 22.5px;
+  left: 3.54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(244, 157, 17, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Inknut Antiqua, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.frame-110 {
+  position: absolute;
+  top: 0px;
+  left: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 373px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.monday-saturday-09am-09 {
+  color: rgba(245, 245, 245, 1);
+  font-size: 14px;
+  line-height: 321%;
+  font-family: Inclusive Sans, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+.frame-103 {
+    position: absolute;
+    left: 900px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 150px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 1);
+}
+.ho-tro-khach-hang {
+  color: rgba(244, 157, 17, 1);
+  font-size: 14px;
+  line-height: 321%;
+  font-family: IM FELL English SC, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+.frame-111 {
+  position: relative;
+  left: 400px;
+  display: flex;
+  width: 470px;
+  padding-left: 100px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 1);
+}
+.contac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(244, 157, 17, 1);
+  font-size: 18px;
+  line-height: 250%;
+  font-family: Imperial Script, handwriting;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
