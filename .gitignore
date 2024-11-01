@@ -197,3 +197,4 @@ client/public/static/
 .pnp.*
 
 server
+.sequelizerc
