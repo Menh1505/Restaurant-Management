@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/tableDishes.css"
+import "./tableDishes.css"
 
 export default function TableDishes() {
   return (

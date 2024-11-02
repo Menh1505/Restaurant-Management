@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/booking.css";
+import "./booking.css";
 
 export default function BookingTable() {
   const [formData, setFormData] = useState({

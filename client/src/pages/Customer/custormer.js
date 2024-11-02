@@ -1,6 +1,6 @@
 
 import React from "react"
-import "../styles/customer.css"
+import "./customer.css"
 
 export default function Customerhome() {
   return (

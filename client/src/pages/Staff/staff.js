@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/staff.css"
+import "./staff.css"
 
 export default function Staffhome() {
   return (

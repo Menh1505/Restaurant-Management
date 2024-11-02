@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/revenus.css"
+import "./revenus.css"
 
 export default function Revenue() {
   return (

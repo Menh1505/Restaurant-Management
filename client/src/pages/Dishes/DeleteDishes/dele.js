@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/dele.css"
+import "./dele.css"
 
 export default function Deletions() {
   return (

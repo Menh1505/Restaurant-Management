@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/add.css"
+import "./add.css"
 
 export default function AdditionDishes() {
   return (

@@ -54,3 +54,11 @@ db.sequelize.sync().then(() => {
 }).catch((err) => {
   console.error('Failed to sync database:', err);
 });
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    status: 'error',
+    message: 'Something went wrong!'
+  });
+});

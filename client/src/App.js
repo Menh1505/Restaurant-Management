@@ -1,43 +1,55 @@
 import React from 'react';
-import './App.css';
-import Navigation from './Navigation/Navigation'
-import Footer from './Footer/footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './assets/styles/App.css';
 
-//PAGES
-import Admin from './PAGES/Admin'
-import Menu from './PAGES/menu'
-import Customerhome from './PAGES/custormer'
-import Staffhome from './PAGES/staff'
-import Revenue from './PAGES/revenus'
-import Bookingtable from './PAGES/booking'
+// Components
+import Navigation from './component/Navigation/Navigation';
+import Footer from './component/Footer/footer';
 
-import AdditionDishes from './PAGES/add'
-import Deletions from './PAGES/dele'
-import ConfirmDishes from './PAGES/comfirm'
-import TableDishes from './PAGES/tableDishes'
-import Login from './PAGES/Login';
+// Pages
+import Home from './pages/Home/Home';
+import LoginPage from './pages/Login/LoginPage';
+import Menu from './pages/Menu/menu';
+import Admin from './pages/Admin/Admin';
+import Staff from './pages/Staff/staff';
+import Customer from './pages/Customer/custormer';
+import Booking from './pages/Booking/booking';
+import Revenue from './pages/Revenue/revenus';
+
+// Dishes Pages
+import AddDishes from './pages/Dishes/AddDishes/add';
+import DeleteDishes from './pages/Dishes/DeleteDishes/dele';
+import ConfirmDishes from './pages/Dishes/ConfirmDish/comfirm';
+import TableDishes from './pages/Dishes/TableDishes/tableDishes';
 
 function App() {
   return (
-    <div>
-      <Navigation />
-      <Menu />
-      <Customerhome />
-      <Deletions />
-      <ConfirmDishes />
-      <Admin />
-      <Revenue />
-      <AdditionDishes />
-      <Bookingtable />
-      <TableDishes />
-      <Login />
-      <Footer />
+    <Router>
+      <div className="app">
+        <Navigation />
+        <main className="main-content">
+          <Routes>
+            {/* Main Routes */}
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/staff" element={<Staff />} />
+            <Route path="/customer" element={<Customer />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/revenue" element={<Revenue />} />
 
-    </div>
-
+            {/* Dishes Routes */}
+            <Route path="/add-dishes" element={<AddDishes />} />
+            <Route path="/delete-dishes" element={<DeleteDishes />} />
+            <Route path="/confirm-dishes" element={<ConfirmDishes />} />
+            <Route path="/table-dishes" element={<TableDishes />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
-
-export default App;
-
+export default App; 

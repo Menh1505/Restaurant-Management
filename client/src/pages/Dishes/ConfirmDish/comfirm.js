@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/comfirm.css"
+import "./comfirm.css"
 
 export default function ConfirmDishes() {
   return (
