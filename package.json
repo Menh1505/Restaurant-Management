@@ -11,15 +11,5 @@
     "start:client": "npm start --prefix client",
     "start:server": "npm start --prefix server",
     "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\""
-  },
-  "devDependencies": {
-    "concurrently": "^6.5.1",
-    "sequelize-cli": "^6.6.2"
-  },
-  "dependencies": {
-    "axios": "^1.7.7",
-    "mysql2": "^3.11.3",
-    "react-router-dom": "^6.27.0",
-    "sequelize": "^6.37.3"
   }
 }
