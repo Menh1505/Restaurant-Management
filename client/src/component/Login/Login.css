@@ -48,6 +48,20 @@
   background-color: #fff;
 }
 
+.input-group input {
+  height: 30px;
+  padding-left: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.input-group input::placeholder {
+  color: #999;
+  padding-left: 5px;
+}
+
 .login-button {
   width: 100%;
   padding: 12px;

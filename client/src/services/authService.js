@@ -1,18 +1,24 @@
-import apiClient from '../api/apiClient';
+import axios from 'axios';
+
+const API_URL = 'http://localhost:5000';
 
 export const authService = {
     login: async (credentials) => {
-        const response = await apiClient.post('/auth/login', credentials);
-        return response.data;
-    },
+        try {
+            console.log('Sending request to:', `${API_URL}/auth/login`);
+            console.log('With credentials:', credentials);
 
-    logout: async () => {
-        localStorage.removeItem('token');
-        return true;
-    },
+            const response = await axios.post(`${API_URL}/auth/login`, credentials, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
 
-    register: async (userData) => {
-        const response = await apiClient.post('/auth/register', userData);
-        return response.data;
+            console.log('Response received:', response.data);
+            return response.data;
+        } catch (error) {
+            console.error('Login request failed:', error.response || error);
+            throw error.response?.data || error;
+        }
     }
 };

@@ -16,6 +16,6 @@ export default function Home() {
         //         </section>
         //     </main>
         // </div>
-        <img src={pic} alt="Not Found" className="frame-90" />
+        <img src={pic} alt="Not Found" className="home-background" />
     );
 }

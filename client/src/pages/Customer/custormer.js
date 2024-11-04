@@ -19,7 +19,7 @@ export default function Customerhome() {
           />
           <div className="frame-106 clip-contents">
             <p className="well-come-to-the-boys-res">
-              Well come to The Boys Restaurant The best Restaurant in VietNam
+              Welcome to The Boys Restaurant The best Restaurant in VietNam
             </p>
           </div>
         </div>
