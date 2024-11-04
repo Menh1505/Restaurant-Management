@@ -4,7 +4,7 @@ import LoginForm from "../../component/Login/Login";
 //import Footer from "../../component/Footer/footer";
 import "./LoginPage.css";
 
-function LoginPage() {
+export default function LoginPage() {
   return (
     <div className="page-container">
       <main className="main-content">
@@ -12,6 +12,4 @@ function LoginPage() {
       </main>
     </div>
   );
-}
-
-export default LoginPage;
+};

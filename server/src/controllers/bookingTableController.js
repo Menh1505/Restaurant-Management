@@ -88,7 +88,7 @@ const bookingController = {
                     customerEmail,
                     personNum,
                     dayBooking,
-                    status: Boolean(status)  // Chuyển đổi status sang boolean
+                    status: Boolean(status)
                 });
 
                 res.status(200).json(booking);

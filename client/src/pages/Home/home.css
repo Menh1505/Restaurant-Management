@@ -10,5 +10,9 @@
 
 
 .menu-section {
-    padding: 2rem;
+    padding: 0rem;
+}
+
+.home-background {
+    width: 1440px;
 }
