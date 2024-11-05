@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  BASE_URL: 'http://localhost:5000/api', // hoặc URL server của bạn
+  BASE_URL: 'http://localhost:5000', // URL server
   TIMEOUT: 30000,
   HEADERS: {
     'Content-Type': 'application/json',

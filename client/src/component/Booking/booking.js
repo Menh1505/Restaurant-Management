@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useBooking } from '../../hooks/useBookingTable';
 import "./booking.css";
 
-export default function BookingTable() {
+export default function BookingTableForm() {
   const { loading, createBooking } = useBooking();
   const [formData, setFormData] = useState({
     name: "",
@@ -21,22 +21,65 @@ export default function BookingTable() {
     }));
   };
 
+  const validateForm = (data) => {
+    const errors = {};
+
+    // Validate name
+    if (data.name.length < 2 || data.name.length > 100) {
+      errors.name = "Tên phải có độ dài từ 2 đến 100 ký tự";
+    }
+
+    // Validate phone
+    if (!/^[0-9]{10,15}$/.test(data.phone)) {
+      errors.phone = "Số điện thoại không hợp lệ";
+    }
+
+    // Validate email
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      errors.email = "Email không hợp lệ";
+    }
+
+    // Validate persons
+    const persons = parseInt(data.persons);
+    if (isNaN(persons) || persons < 1 || persons > 8) {
+      errors.persons = "Số người phải từ 1 đến 8";
+    }
+
+    // Validate date
+    const bookingDate = new Date(data.date);
+    const today = new Date();
+    if (bookingDate < today) {
+      errors.date = "Ngày đặt bàn phải là ngày trong tương lai";
+    }
+
+    return Object.keys(errors).length === 0 ? null : errors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form
+    const errors = validateForm(formData);
+    if (errors) {
+      const errorMessage = Object.values(errors).join('\n');
+      alert(errorMessage);
+      return;
+    }
+
     try {
-      // Chuyển đổi dữ liệu form sang format API
+      const formattedDate = new Date(formData.date).toISOString();
+
       const bookingData = {
         customerName: formData.name,
         customerPhoneNumber: formData.phone,
         customerEmail: formData.email,
         personNum: parseInt(formData.persons),
-        dayBooking: formData.date,
+        dayBooking: formattedDate,
         status: true
       };
 
       await createBooking(bookingData);
 
-      // Reset form sau khi đặt bàn thành công
       setFormData({
         name: "",
         phone: "",
@@ -48,7 +91,8 @@ export default function BookingTable() {
       alert('Đặt bàn thành công!');
     } catch (err) {
       console.error('Error creating booking:', err);
-      alert('Đặt bàn thất bại: ' + (err.message || 'Đã có lỗi xảy ra'));
+      const errorMessage = err.response?.data?.message || err.message || 'Đã có lỗi xảy ra';
+      alert('Đặt bàn thất bại: ' + errorMessage);
     }
   };
 
@@ -66,7 +110,7 @@ export default function BookingTable() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="input-field"
+            className="booking-input-field"
           />
           <input
             type="tel"
@@ -75,7 +119,7 @@ export default function BookingTable() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="input-field"
+            className="booking-input-field"
           />
           <input
             type="email"
@@ -84,14 +128,14 @@ export default function BookingTable() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="input-field"
+            className="booking-input-field"
           />
           <select
             name="persons"
             value={formData.persons}
             onChange={handleChange}
             required
-            className="input-field"
+            className="booking-input-field"
           >
             <option value="" disabled>
               How many persons?
@@ -108,7 +152,7 @@ export default function BookingTable() {
             value={formData.date}
             onChange={handleChange}
             required
-            className="input-field"
+            className="booking-input-field"
             min={new Date().toISOString().split('T')[0]} // Không cho phép chọn ngày trong quá khứ
           />
           <button type="submit" className="submit-button" disabled={loading}>

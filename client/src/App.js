@@ -13,7 +13,7 @@ import Menu from './pages/Menu/menu';
 import Admin from './pages/Admin/Admin';
 import Staff from './pages/Staff/staff';
 import Customer from './pages/Customer/custormer';
-import Booking from './pages/Booking/booking';
+import Booking from './component/Booking/booking';
 import Revenue from './pages/Revenue/revenus';
 
 // Dishes Pages

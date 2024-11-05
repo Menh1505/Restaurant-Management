@@ -1,74 +1,95 @@
-// client/src/api/bookingService.js
 import apiClient from '../api/apiClient';
 
+const handleError = (error) => {
+    if (error.response) {
+        // Server trả về response với status code lỗi
+        throw error.response.data;
+    } else if (error.request) {
+        // Request được gửi nhưng không nhận được response
+        throw new Error('Không thể kết nối đến server. Vui lòng thử lại sau.');
+    } else {
+        // Lỗi khi setting up request
+        throw new Error('Có lỗi xảy ra. Vui lòng thử lại.');
+    }
+};
+
 export const bookingService = {
-    // Lấy tất cả bookings
     getAllBookings: async () => {
         try {
             const response = await apiClient.get('/booking-table');
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Lấy booking theo ID
     getBookingById: async (id) => {
         try {
             const response = await apiClient.get(`/booking-table/${id}`);
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Tạo booking mới
     createBooking: async (bookingData) => {
         try {
-            const response = await apiClient.post('/booking-table', bookingData);
+            // Format date before sending
+            const formattedData = {
+                ...bookingData,
+                dayBooking: new Date(bookingData.dayBooking).toISOString()
+            };
+
+            const response = await apiClient.post('/booking-table', formattedData);
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Cập nhật booking
     updateBooking: async (id, bookingData) => {
         try {
-            const response = await apiClient.put(`/booking-table/${id}`, bookingData);
+            // Format date before sending
+            const formattedData = {
+                ...bookingData,
+                dayBooking: new Date(bookingData.dayBooking).toISOString()
+            };
+
+            const response = await apiClient.put(`/booking-table/${id}`, formattedData);
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Xóa booking
     deleteBooking: async (id) => {
         try {
             const response = await apiClient.delete(`/booking-table/${id}`);
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Lấy bookings theo ngày
     getBookingsByDate: async (date) => {
         try {
-            const response = await apiClient.get(`/booking-table/date/${date}`);
+            // Format date for URL
+            const formattedDate = new Date(date).toISOString().split('T')[0];
+            const response = await apiClient.get(`/booking-table/date/${formattedDate}`);
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     },
 
-    // Cập nhật trạng thái booking
     updateBookingStatus: async (id, status) => {
         try {
-            const response = await apiClient.patch(`/booking-table/${id}/status`, { status });
+            const response = await apiClient.patch(`/booking-table/${id}/status`, {
+                status: Boolean(status)
+            });
             return response.data;
         } catch (error) {
-            throw error.response?.data || error.message;
+            handleError(error);
         }
     }
 };
