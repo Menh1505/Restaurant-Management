@@ -4,10 +4,25 @@
   display: flex;
   width: 1440px;
   height: 880px;
+  background-image: url('../../assets/image/openingbgr.jpg');
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #00000099, transparent);
+  /* background: linear-gradient(45deg, #00000099, transparent); */
   font-family: 'Inter', sans-serif;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .login-form {

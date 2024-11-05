@@ -7,7 +7,7 @@ import Navigation from './component/Navigation/Navigation';
 import Footer from './component/Footer/footer';
 
 // Pages
-import Home from './pages/Home/Home';
+import HomePage from './pages/Home/HomePage';
 import LoginPage from './pages/Login/LoginPage';
 import Menu from './pages/Menu/menu';
 import Admin from './pages/Admin/Admin';
@@ -30,7 +30,7 @@ function App() {
         <main className="main-content">
           <Routes>
             {/* Main Routes */}
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/admin" element={<Admin />} />

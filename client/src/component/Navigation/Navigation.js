@@ -29,7 +29,7 @@ export default function Navigation() {
 
         <div className="frame-971 clip-contents">
           <Link to="/booking" className="bookingtable">
-            BookingTable
+            BOOKING
           </Link>
         </div>
 
@@ -39,15 +39,12 @@ export default function Navigation() {
           </Link>
         </div>
 
-
-        {/* </div> */}
       </div>
       <div>
         <Link to="/" className="return">
           Revenue
         </Link>
       </div>
-      {/* <div className="group-4497"> */}
       <div>
         <Link to="/login" className="user-icon">
           &#128100;
