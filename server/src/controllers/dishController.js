@@ -7,10 +7,14 @@ const dishController = {
             const dishes = await Dish.findAll();
             res.status(200).json(dishes);
         } catch (error) {
-            res.status(500).json({ message: 'Lỗi khi lấy danh sách món ăn', error });
+            console.error('Error in getAllDishes:', error);
+            res.status(500).json({
+                message: 'Lỗi khi lấy danh sách món ăn',
+                error: error.message
+            });
         }
     },
-    // Lấy một món ăn theo ID
+
     getDishById: async (req, res) => {
         try {
             const dish = await Dish.findByPk(req.params.id);
@@ -20,51 +24,130 @@ const dishController = {
                 res.status(404).json({ message: 'Không tìm thấy món ăn' });
             }
         } catch (error) {
-            res.status(500).json({ message: 'Lỗi khi lấy món ăn', error });
+            console.error('Error in getDishById:', error);
+            res.status(500).json({
+                message: 'Lỗi khi lấy món ăn',
+                error: error.message
+            });
         }
     },
-    // Tạo một món ăn mới
+
     createDish: async (req, res) => {
         try {
-            const { dishName, dishPrice, dishImage, dishDetail } = req.body; // Lấy dữ liệu từ request body
-            const newDish = await Dish.create({ dishName, dishPrice, dishImage, dishDetail }); // Tạo bản ghi mới
-            res.status(201).json(newDish); // Trả về món ăn vừa tạo với mã 201 (Created)
+            const { dishName, dishPrice, dishImage, dishDetail } = req.body;
+
+            if (!dishName || !dishPrice) {
+                return res.status(400).json({
+                    message: 'Tên món và giá không được để trống'
+                });
+            }
+
+            const price = parseFloat(dishPrice);
+            if (isNaN(price) || price <= 0) {
+                return res.status(400).json({
+                    message: 'Giá món ăn không hợp lệ'
+                });
+            }
+
+            const newDish = await Dish.create({
+                dishName: dishName.trim(),
+                dishPrice: price,
+                dishImage: dishImage?.trim(),
+                dishDetail: dishDetail?.trim()
+            });
+
+            res.status(201).json(newDish);
         } catch (error) {
-            res.status(500).json({ message: 'Lỗi khi tạo món ăn', error });
+            console.error('Error in createDish:', error);
+            if (error.name === 'SequelizeValidationError') {
+                res.status(400).json({
+                    message: 'Dữ liệu không hợp lệ',
+                    errors: error.errors.map(e => e.message)
+                });
+            } else {
+                res.status(500).json({
+                    message: 'Lỗi khi tạo món ăn',
+                    error: error.message
+                });
+            }
         }
     },
-    // Cập nhật một món ăn
+
     updateDish: async (req, res) => {
         try {
-            const { dishName, dishPrice, dishImage, dishDetail } = req.body; // Lấy dữ liệu cập nhật từ request body
-            const dish = await Dish.findByPk(req.params.id); // Tìm món ăn cần cập nhật
-            if (dish) {
-                // Cập nhật giá trị cho các thuộc tính
-                dish.dishName = dishName;
-                dish.dishPrice = dishPrice;
-                dish.dishImage = dishImage;
-                dish.dishDetail = dishDetail;
-                await dish.save(); // Lưu thay đổi vào cơ sở dữ liệu
-                res.status(200).json(dish); // Trả về món ăn sau khi cập nhật với mã 200
-            } else {
-                res.status(404).json({ message: 'Không tìm thấy món ăn' });
+            const dishId = req.params.id; // params.id từ URL
+            const { dishName, dishPrice, dishImage, dishDetail } = req.body;
+
+            // Validate required fields
+            if (!dishName || !dishPrice) {
+                return res.status(400).json({
+                    message: 'Tên món và giá không được để trống'
+                });
             }
+
+            // Validate price
+            const price = parseFloat(dishPrice);
+            if (isNaN(price) || price <= 0) {
+                return res.status(400).json({
+                    message: 'Giá món ăn không hợp lệ'
+                });
+            }
+
+            const dish = await Dish.findByPk(dishId); // Tìm theo dishId
+            if (!dish) {
+                return res.status(404).json({
+                    message: 'Không tìm thấy món ăn'
+                });
+            }
+
+            // Update dish
+            await dish.update({
+                dishName: dishName.trim(),
+                dishPrice: price,
+                dishImage: dishImage?.trim(),
+                dishDetail: dishDetail?.trim()
+            });
+
+            // Fetch updated dish to return
+            const updatedDish = await Dish.findByPk(dishId);
+            res.status(200).json(updatedDish);
         } catch (error) {
-            res.status(500).json({ message: 'Lỗi khi cập nhật món ăn', error });
+            console.error('Error in updateDish:', error);
+            if (error.name === 'SequelizeValidationError') {
+                res.status(400).json({
+                    message: 'Dữ liệu không hợp lệ',
+                    errors: error.errors.map(e => e.message)
+                });
+            } else {
+                res.status(500).json({
+                    message: 'Lỗi khi cập nhật món ăn',
+                    error: error.message
+                });
+            }
         }
     },
-    // Xóa một món ăn
+
     deleteDish: async (req, res) => {
         try {
-            const dish = await Dish.findByPk(req.params.id); // Tìm món ăn theo ID
-            if (dish) {
-                await dish.destroy(); // Xóa bản ghi
-                res.status(200).json({ message: 'Xóa món ăn thành công' });
-            } else {
-                res.status(404).json({ message: 'Không tìm thấy món ăn' });
+            const dishId = req.params.id;
+            const dish = await Dish.findByPk(dishId);
+
+            if (!dish) {
+                return res.status(404).json({
+                    message: 'Không tìm thấy món ăn'
+                });
             }
+
+            await dish.destroy();
+            res.status(200).json({
+                message: 'Xóa món ăn thành công'
+            });
         } catch (error) {
-            res.status(500).json({ message: 'Lỗi khi xóa món ăn', error });
+            console.error('Error in deleteDish:', error);
+            res.status(500).json({
+                message: 'Lỗi khi xóa món ăn',
+                error: error.message
+            });
         }
     }
 };

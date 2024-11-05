@@ -9,7 +9,7 @@ import Footer from './component/Footer/footer';
 // Pages
 import HomePage from './pages/Home/HomePage';
 import LoginPage from './pages/Login/LoginPage';
-import Menu from './pages/Menu/menu';
+import Menu from './pages/Menu/MenuPage';
 import Admin from './pages/Admin/Admin';
 import Staff from './pages/Staff/staff';
 import Customer from './pages/Customer/custormer';
