@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { authService } from '../services/authService';
 
-export const useAuth = () => {
+const AuthContext = createContext(null);
+
+export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
@@ -47,11 +49,25 @@ export const useAuth = () => {
         localStorage.removeItem('user');
     };
 
-    return {
+    const value = {
         isAuthenticated,
         user,
         login,
         logout,
         error
     };
+
+    return (
+        <AuthContext.Provider value={value}>
+            {children}
+        </AuthContext.Provider>
+    );
+};
+
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth must be used within an AuthProvider');
+    }
+    return context;
 };

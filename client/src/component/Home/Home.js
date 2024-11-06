@@ -10,12 +10,13 @@ export default function HomePages() {
     const navigate = useNavigate();
 
     const handleViewMenu = () => {
-        navigate('/menu'); // Chuyển đến trang menu
+        navigate('/menu');
     };
 
     return (
         <div className="home-container">
             <main className="main-content">
+
                 {/* Banner Section */}
                 <section className="banner-section">
                     <div className="banner-content">
