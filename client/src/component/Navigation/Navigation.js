@@ -51,7 +51,7 @@ export default function Navigation() {
       </div>
 
       <div>
-        <Link to="/" className="return">
+        <Link to="/revenue" className="return">
           Revenue
         </Link>
       </div>

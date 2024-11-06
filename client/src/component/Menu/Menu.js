@@ -76,11 +76,11 @@ export default function MenuPage() {
   };
 
   // Delete dish
-  const handleDelete = async (id) => {
+  const handleDelete = async (dishId) => {
     if (window.confirm("Bạn có chắc muốn xóa món ăn này?")) {
       try {
-        await dishService.deleteDish(id);
-        setDishes(prev => prev.filter(dish => dish.id !== id));
+        await dishService.deleteDish(dishId);
+        setDishes(prev => prev.filter(dish => dish.dishId !== dishId));  // Sửa từ id thành dishId
         alert("Xóa món ăn thành công!");
       } catch (err) {
         alert("Lỗi khi xóa món ăn: " + err.message);
@@ -105,17 +105,17 @@ export default function MenuPage() {
 
   return (
     <div className="menu-container">
-      <h1 className="menu-title">Thực Đơn Của Chúng Tôi</h1>
+      <h1 className="menu-title">My Restaurant Menu</h1>
 
       {/* Add button */}
       <button className="add-button" onClick={() => setIsModalOpen(true)}>
-        Thêm Món Ăn
+        Add Dish
       </button>
 
       {/* Menu grid */}
       <div className="menu-grid">
         {dishes.map((dish) => (
-          <div key={dish.dishId} className="menu-item"> {/* Đảm bảo sử dụng dishId làm key */}
+          <div key={dish.dishId} className="menu-item">
             <div className="menu-item-image">
               <img src={dish.dishImage} alt={dish.dishName} />
             </div>
@@ -124,8 +124,8 @@ export default function MenuPage() {
               <p className="dish-detail">{dish.dishDetail}</p>
               <div className="dish-price">{dish.dishPrice} $</div>
               <div className="dish-actions">
-                <button onClick={() => openEditModal(dish)}>Sửa</button>
-                <button onClick={() => handleDelete(dish.dishId)}>Xóa</button>
+                <button onClick={() => openEditModal(dish)}>Edit</button>
+                <button onClick={() => handleDelete(dish.dishId)}>Delete</button>
               </div>
             </div>
           </div>
@@ -136,10 +136,10 @@ export default function MenuPage() {
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <h2>{selectedDish ? "Sửa Món Ăn" : "Thêm Món Ăn"}</h2>
+            <h2>{selectedDish ? "Edit Dish" : "Add Dish"}</h2>
             <form onSubmit={selectedDish ? handleEdit : handleAdd}>
               <div className="form-group">
-                <label>Tên món:</label>
+                <label>Dish Name:</label>
                 <input
                   type="text"
                   name="dishName"
@@ -149,7 +149,7 @@ export default function MenuPage() {
                 />
               </div>
               <div className="form-group">
-                <label>Giá:</label>
+                <label>Price:</label>
                 <input
                   type="number"
                   name="dishPrice"
@@ -159,7 +159,7 @@ export default function MenuPage() {
                 />
               </div>
               <div className="form-group">
-                <label>URL Hình ảnh:</label>
+                <label>Image URL:</label>
                 <input
                   type="text"
                   name="dishImage"
@@ -168,7 +168,7 @@ export default function MenuPage() {
                 />
               </div>
               <div className="form-group">
-                <label>Mô tả:</label>
+                <label>Description:</label>
                 <textarea
                   name="dishDetail"
                   value={formData.dishDetail}
@@ -177,7 +177,7 @@ export default function MenuPage() {
               </div>
               <div className="form-actions">
                 <button type="submit">
-                  {selectedDish ? "Cập Nhật" : "Thêm"}
+                  {selectedDish ? "Update" : "Add"}
                 </button>
                 <button type="button" onClick={() => {
                   setIsModalOpen(false);
@@ -189,7 +189,7 @@ export default function MenuPage() {
                     dishDetail: ""
                   });
                 }}>
-                  Hủy
+                  Cancel
                 </button>
               </div>
             </form>
