@@ -1,25 +1,19 @@
-import React from "react"
-import "./footer.css"
+import React from "react";
+import "./footer.css";
 
 export default function Footer() {
   return (
-    <div className="frame-142 clip-contents">
-      <div className="group-6104">
-        <div className="frame-101 clip-contents">
-          <p className="opening">Opening</p>
-          <div className="frame-110 clip-contents">
-            <p className="monday-saturday-09am-09">
-              Monday - Saturday: 09AM - 09PM <hr></hr>Sunday : 10AM - 08PM
-            </p>
-          </div>
-        </div>
-        <div className="frame-103 clip-contents">
-          <p className="ho-tro-khach-hang">Ho Tro Khach Hang</p>
-        </div>
-        <div className="frame-111 clip-contents">
-          <p className="contac">Contact</p>
-        </div>
+    <div className="footer-container">
+      <div className="footer-section">
+        <p className="footer-title">Ho Tro Khach Hang</p>
+        <p className="footer-item">Email: support@example.com</p>
+        <p className="footer-item">Phone: +123 456 7890</p>
+      </div>
+      <div className="footer-section">
+        <p className="footer-title">Contact</p>
+        <p className="footer-item">Address: 123 Main St, City, Country</p>
+        <p className="footer-item">Email: contact@example.com</p>
       </div>
     </div>
-  )
+  );
 }

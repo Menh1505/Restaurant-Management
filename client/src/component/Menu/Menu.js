@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./menu.css";
 import { dishService } from "../../services/dishService";
+import { useAuth } from "../../context/AuthContext";
 
 export default function MenuPage() {
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
   const [dishes, setDishes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -108,9 +111,11 @@ export default function MenuPage() {
       <h1 className="menu-title">My Restaurant Menu</h1>
 
       {/* Add button */}
-      <button className="add-button" onClick={() => setIsModalOpen(true)}>
-        Add Dish
-      </button>
+      {isAdmin && (
+        <button className="add-button" onClick={() => setIsModalOpen(true)}>
+          Add Dish
+        </button>
+      )}
 
       {/* Menu grid */}
       <div className="menu-grid">
@@ -123,10 +128,12 @@ export default function MenuPage() {
               <h3 className="dish-name">{dish.dishName}</h3>
               <p className="dish-detail">{dish.dishDetail}</p>
               <div className="dish-price">{dish.dishPrice} $</div>
-              <div className="dish-actions">
-                <button onClick={() => openEditModal(dish)}>Edit</button>
-                <button onClick={() => handleDelete(dish.dishId)}>Delete</button>
-              </div>
+              {isAdmin && (
+                <div className="dish-actions">
+                  <button onClick={() => openEditModal(dish)}>Edit</button>
+                  <button onClick={() => handleDelete(dish.dishId)}>Delete</button>
+                </div>
+              )}
             </div>
           </div>
         ))}

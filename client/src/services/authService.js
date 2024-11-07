@@ -15,14 +15,12 @@ export const authService = {
 
             console.log('Server response:', response.data);
 
-            // Validate response format
             if (!response.data || !response.data.success || !response.data.user) {
                 throw new Error('Invalid response format from server');
             }
 
-            // Ensure user object has required fields
             const { user } = response.data;
-            if (!user.userName || !user.userEmail) {
+            if (!user.userName || !user.userEmail || !user.role) { // Thêm kiểm tra role
                 throw new Error('Missing required user fields');
             }
 
@@ -31,7 +29,7 @@ export const authService = {
                 user: {
                     userName: user.userName,
                     userEmail: user.userEmail,
-                    // Add other needed user fields
+                    role: user.role  // Đảm bảo trả về role
                 }
             };
         } catch (error) {

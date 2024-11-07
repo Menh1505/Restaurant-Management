@@ -38,7 +38,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.input-group {
+.input-group-login {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -63,7 +63,7 @@
   background-color: #fff;
 }
 
-.input-group input {
+.input-group-login input {
   height: 30px;
   padding-left: 5px;
   border: 2px solid #ccc;
@@ -72,7 +72,7 @@
   background-color: #fff;
 }
 
-.input-group input::placeholder {
+.input-group-login input::placeholder {
   color: #999;
   padding-left: 5px;
 }

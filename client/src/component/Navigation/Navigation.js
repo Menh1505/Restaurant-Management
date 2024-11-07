@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { useAuth } from "../../context/AuthContext" // Import useAuth
-import "./Navigation.css"
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import "./Navigation.css";
 
 export default function Navigation() {
   const { isAuthenticated, user, logout } = useAuth();
@@ -42,19 +42,15 @@ export default function Navigation() {
             BOOKING
           </Link>
         </div>
+      </div>
 
-        <div className="frame-971 clip-contents">
-          <Link to="/admin" className="pages">
-            PAGES
+      {user?.role === 'admin' && (
+        <div>
+          <Link to="/revenue" className="return">
+            REVENUE
           </Link>
         </div>
-      </div>
-
-      <div>
-        <Link to="/revenue" className="return">
-          Revenue
-        </Link>
-      </div>
+      )}
 
       {/* User Section */}
       <div className="user-section">
@@ -81,5 +77,5 @@ export default function Navigation() {
         )}
       </div>
     </div>
-  )
+  );
 }
