@@ -3,7 +3,7 @@ import "./menu.css";
 import { dishService } from "../../services/dishService";
 import { useAuth } from "../../context/AuthContext";
 
-export default function MenuPage() {
+export default function Menu() {
   const { user } = useAuth();
   const isAdmin = user?.role === 'admin';
   const [dishes, setDishes] = useState([]);

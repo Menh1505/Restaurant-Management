@@ -4,7 +4,7 @@ export const invoiceService = {
     // Lấy tất cả hóa đơn
     getAllInvoices: async () => {
         try {
-            const response = await apiClient.get('/invoices');  // Thêm /api vào path
+            const response = await apiClient.get('/invoices');
             if (response.status === 200) {
                 return response.data;
             }
@@ -14,6 +14,19 @@ export const invoiceService = {
             throw new Error(error.response?.data?.message || 'Không thể lấy danh sách hóa đơn');
         }
     },
+
+    // getInvoiceDetail: async (detailId) => {
+    //     try {
+    //         const response = await apiClient.get(`/detail-invoice/${detailId}`);
+    //         if (response.status === 200) {
+    //             return response.data;
+    //         }
+    //         throw new Error('Failed to fetch invoice detail');
+    //     } catch (error) {
+    //         console.error('Error fetching invoice detail:', error);
+    //         throw new Error(error.response?.data?.message || 'Không thể lấy chi tiết hóa đơn');
+    //     }
+    // },
 
     // Lấy hóa đơn theo ID
     getInvoiceById: async (id) => {
@@ -32,7 +45,7 @@ export const invoiceService = {
     // Lấy doanh thu theo khoảng thời gian
     getRevenueByDateRange: async (startDate, endDate) => {
         try {
-            const response = await apiClient.get('/invoices/revenue', {
+            const response = await apiClient.get('/detail', {
                 params: { startDate, endDate }
             });
             if (response.status === 200) {

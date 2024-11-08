@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { invoiceService } from '../../services/invoiceService';
-import './revenus.css';
+import './revenue.css';
+import { Link } from 'react-router-dom';
 
 export default function Revenue() {
   const [invoices, setInvoices] = useState([]);
-  const [originalInvoices, setOriginalInvoices] = useState([]); // Thêm state này
+  const [originalInvoices, setOriginalInvoices] = useState([]);
   const [totalRevenue, setTotalRevenue] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -142,6 +143,7 @@ export default function Revenue() {
               <th>Check Out Time</th>
               <th>Detail ID</th>
               <th>Total Amount</th>
+              <th>Detail</th>
             </tr>
           </thead>
           <tbody>
@@ -152,6 +154,11 @@ export default function Revenue() {
                 <td>{new Date(invoice.checkOut).toLocaleDateString('en-US')}</td>
                 <td>{invoice.detailId || 'N/A'}</td>
                 <td>${invoice.total}</td>
+                <td>
+                  <Link to={`/detail-invoice/${invoice.detailId}`} className="detail-link">
+                    View Detail
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>

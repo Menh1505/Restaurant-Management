@@ -1,13 +1,11 @@
 import React from "react";
-import MenuPage from "../../component/Menu/Menu";
-const Menu = () => {
+import Menu from "../../component/Menu/Menu";
+export default function MenuPage() {
   return (
     <div>
       <main className="main-content">
-        <MenuPage />
+        <Menu />
       </main>
     </div>
   );
 };
-
-export default Menu;
