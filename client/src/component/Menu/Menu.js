@@ -122,7 +122,7 @@ export default function Menu() {
         {dishes.map((dish) => (
           <div key={dish.dishId} className="menu-item">
             <div className="menu-item-image">
-              <img src={dish.dishImage} alt={dish.dishName} />
+              <img src={`${process.env.PUBLIC_URL}/image/${dish.dishImage}`} alt={dish.name} />
             </div>
             <div className="menu-item-content">
               <h3 className="dish-name">{dish.dishName}</h3>
