@@ -1,24 +1,29 @@
 import apiClient from '../api/apiClient';
 
 const handleError = (error) => {
+    console.error('API Error:', error);
     if (error.response) {
-        // Server trả về response với status code lỗi
         throw error.response.data;
     } else if (error.request) {
-        // Request được gửi nhưng không nhận được response
-        throw new Error('Không thể kết nối đến server. Vui lòng thử lại sau.');
+        throw new Error('Network error. Please try again.');
     } else {
-        // Lỗi khi setting up request
-        throw new Error('Có lỗi xảy ra. Vui lòng thử lại.');
+        throw new Error('An error occurred. Please try again.');
     }
 };
 
 export const bookingService = {
     getAllBookings: async () => {
         try {
+            console.log('Calling getAllBookings API');
             const response = await apiClient.get('/booking-table');
-            return response.data;
+            console.log('API Response:', response.data);
+
+            return {
+                success: true,
+                data: response.data
+            };
         } catch (error) {
+            console.error('getAllBookings error:', error);
             handleError(error);
         }
     },

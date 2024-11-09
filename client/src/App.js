@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './assets/styles/App.css';
 import { AuthProvider } from './context/AuthContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Components
 import Navigation from './component/Navigation/Navigation';
 import Footer from './component/Footer/footer';
@@ -27,6 +29,20 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         <div className="app">
           <Navigation />
           <main className="main-content">
@@ -38,7 +54,7 @@ function App() {
               <Route path="/admin" element={<Admin />} />
               <Route path="/staff" element={<Staff />} />
               <Route path="/customer" element={<Customer />} />
-              <Route path="/booking" element={<Booking />} />
+              <Route path="/booking-table" element={<Booking />} />
               <Route path="/revenue" element={<RevenuePage />} />
               <Route path="/detail-invoice/:detailId" element={<InvoiceDetailPage />} />
 

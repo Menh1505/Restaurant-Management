@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { invoiceService } from '../../services/invoiceService';
 import './revenue.css';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function Revenue() {
   const [invoices, setInvoices] = useState([]);
@@ -48,7 +49,7 @@ export default function Revenue() {
 
   const filterInvoices = () => {
     if (!dateFilter.startDate || !dateFilter.endDate) {
-      alert('Please select both start and end dates');
+      toast.error('Please select both start and end dates');
       return;
     }
 

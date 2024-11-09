@@ -23,7 +23,7 @@ export default function Navigation() {
         alt="Not Found"
         className="rectangle-218"
       />
-      <p className="the-boy-s">THE BOY'S</p>
+      <p className="the-boy-s">THE BOYS</p>
       <div className="frame-95 clip-contents">
         <div className="frame-971 clip-contents">
           <Link to="/" className="active">
@@ -38,7 +38,7 @@ export default function Navigation() {
         </div>
 
         <div className="frame-971 clip-contents">
-          <Link to="/booking" className="bookingtable">
+          <Link to="/booking-table" className="bookingtable">
             BOOKING
           </Link>
         </div>

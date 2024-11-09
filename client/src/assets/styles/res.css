@@ -10,7 +10,7 @@ p {
 
 .booking-table {
   position: relative;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -20,6 +20,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.89);
 }
+
 .return {
   position: absolute;
   top: 106px;
@@ -44,6 +45,7 @@ p {
   height: 260px;
   box-sizing: border-box;
 }
+
 .frame-47 {
   display: flex;
   flex-direction: row;
@@ -55,6 +57,7 @@ p {
   border: 10px solid rgba(0, 0, 0, 1);
   box-sizing: border-box;
 }
+
 .frame-67 {
   display: flex;
   flex-direction: row;
@@ -63,6 +66,7 @@ p {
   padding: 56px 125px 49px 34px;
   box-sizing: border-box;
 }
+
 .dall-e20241018233857-arestaurant-logo-featuring-the-name-the-boy-sthe-design-should-have-amodern-and-elegant-style-with-aclean-minimalistic-look-the-logo-should-i {
   width: 40px;
   height: 100%;
@@ -98,6 +102,7 @@ p {
     0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(255, 255, 255, 1);
 }
+
 .home {
   display: flex;
   flex-direction: column;
@@ -150,6 +155,7 @@ p {
   padding: 28px 73px 67px 111px;
   box-sizing: border-box;
 }
+
 .group-4500 {
   width: 105px;
   height: 100%;
@@ -157,6 +163,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(244, 157, 17, 1);
 }
+
 .return-1 {
   display: flex;
   flex-direction: column;
@@ -187,6 +194,7 @@ p {
   height: 1878px;
   box-sizing: border-box;
 }
+
 .group-520 {
   width: fit-content;
   height: 1368px;
@@ -194,14 +202,16 @@ p {
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 1);
 }
+
 .group-52 {
   width: 979px;
   height: 100%;
   box-sizing: border-box;
 }
+
 .group-191 {
-    width: 200px;
-    height: 10%;
+  width: 200px;
+  height: 10%;
 
   border: 10px solid rgba(255, 255, 255, 1);
   box-sizing: border-box;
@@ -209,6 +219,7 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     10px 5px 4px rgba(255, 255, 255, 1);
 }
+
 .confirm {
   display: flex;
   flex-direction: column;
@@ -231,6 +242,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0);
 }
+
 .group-478 {
   width: 638px;
   height: 100%;
@@ -238,6 +250,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.31);
 }
+
 .the-boys-restaurant-the {
   display: flex;
   flex-direction: column;
@@ -258,6 +271,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 .thong-tin-nha-hang {
   display: flex;
   flex-direction: column;
@@ -278,6 +292,7 @@ p {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 .lien-he-ho-tro {
   display: flex;
   flex-direction: column;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./menu.css";
 import { dishService } from "../../services/dishService";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 
 export default function Menu() {
   const { user } = useAuth();
@@ -56,9 +57,9 @@ export default function Menu() {
         dishImage: "",
         dishDetail: ""
       });
-      alert("Thêm món ăn thành công!");
+      toast.success("Add dish successfully!");
     } catch (err) {
-      alert("Lỗi khi thêm món ăn: " + err.message);
+      toast.error("Error when adding dish: " + err.message);
     }
   };
 
@@ -72,21 +73,21 @@ export default function Menu() {
       ));
       setIsModalOpen(false);
       setSelectedDish(null);
-      alert("Cập nhật món ăn thành công!");
+      toast.success("Update dish successfully!");
     } catch (err) {
-      alert("Lỗi khi cập nhật món ăn: " + err.message);
+      toast.error("Error when updating dish: " + err.message);
     }
   };
 
   // Delete dish
   const handleDelete = async (dishId) => {
-    if (window.confirm("Bạn có chắc muốn xóa món ăn này?")) {
+    if (window.confirm("Are you sure you want to delete this dish?")) {
       try {
         await dishService.deleteDish(dishId);
-        setDishes(prev => prev.filter(dish => dish.dishId !== dishId));  // Sửa từ id thành dishId
-        alert("Xóa món ăn thành công!");
+        setDishes(prev => prev.filter(dish => dish.dishId !== dishId));
+        toast.success("Delete dish successfully!");
       } catch (err) {
-        alert("Lỗi khi xóa món ăn: " + err.message);
+        toast.error("Error when deleting dish: " + err.message);
       }
     }
   };
@@ -103,7 +104,7 @@ export default function Menu() {
     setIsModalOpen(true);
   };
 
-  if (loading) return <div className="loading">Đang tải...</div>;
+  if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">{error}</div>;
 
   return (

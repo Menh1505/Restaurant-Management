@@ -12,7 +12,6 @@ export default function LoginForm() {
     });
     const [isLoading, setIsLoading] = useState(false);
 
-    // Reset form khi component mount
     useEffect(() => {
         setCredentials({
             userEmail: '',
@@ -20,7 +19,6 @@ export default function LoginForm() {
         });
     }, []);
 
-    // Redirect nếu đã đăng nhập
     useEffect(() => {
         if (isAuthenticated) {
             navigate('/');
@@ -41,11 +39,9 @@ export default function LoginForm() {
         try {
             const response = await login(credentials);
             if (response.success) {
-                // Navigation được handle bởi useEffect
             }
         } catch (err) {
             console.error('Login failed:', err);
-            // Reset password field khi có lỗi
             setCredentials(prev => ({
                 ...prev,
                 password: ''
