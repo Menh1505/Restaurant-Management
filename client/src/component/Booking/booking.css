@@ -199,6 +199,12 @@ input[type="date"].booking-input-field {
   margin: 0 auto;
 }
 
+.booking-admin h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 .booking-table-container {
   width: 1200px;
   margin: 0 auto;
@@ -222,7 +228,7 @@ input[type="date"].booking-input-field {
 /* Header styles */
 .booking-table thead th {
   background-color: #f8f9fa;
-  padding: 0;
+  padding: 15px;
   /* width: 1200px; */
   font-weight: 600;
   color: #495057;
