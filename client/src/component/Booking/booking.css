@@ -1,0 +1,370 @@
+.input-form {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.466);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  animation: slideUp 0.5s ease-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Title styling */
+.book-title {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+}
+
+.book-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background-color: #18bee3;
+}
+
+/* Form styling */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Input fields */
+/* Input fields */
+.booking-input-field {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.booking-input-field:focus {
+  border-color: #18bee3;
+  box-shadow: 0 0 0 3px rgba(24, 168, 235, 0.1);
+  outline: none;
+  background-color: white;
+}
+
+.booking-input-field::placeholder {
+  color: #aaa;
+}
+
+/* Select field specific styling */
+select.booking-input-field {
+  width: 100%;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+  padding-right: 45px;
+}
+
+/* Date input specific styling */
+input[type="date"].booking-input-field {
+  width: 100%;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.booking-input-field:hover {
+  border-color: #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .booking-input-field {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
+
+/* Error state */
+.booking-input-field.error {
+  border-color: #ff3b30;
+  background-color: #fff5f5;
+}
+
+/* Success state */
+.booking-input-field.success {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Submit button */
+.submit-button {
+  background-color: #18bee3;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #18bee3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(24, 183, 227, 0.3);
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loading state */
+.submit-button:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  animation: loading 1.5s infinite;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* Hover effects */
+.input-field:hover {
+  border-color: #ddd;
+}
+
+/* Focus within effect for form */
+.booking-form:focus-within {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+/* Container styles */
+.booking-admin {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.booking-admin h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-table-container {
+  width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  height: auto;
+}
+
+/* Table styles */
+.booking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  height: auto;
+  background-color: white;
+}
+
+/* Header styles */
+.booking-table thead th {
+  background-color: #f8f9fa;
+  padding: 15px;
+  /* width: 1200px; */
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+/* Specific column widths for headers */
+/* th.booking-id {
+  width: 100px;
+  text-align: left;
+}
+
+th.customer-name {
+  width: 200px;
+  text-align: center;
+}
+
+th.phone {
+  width: 150px;
+  text-align: center;
+}
+
+th.email {
+  width: 250px;
+  text-align: center;
+}
+
+th.persons {
+  width: 100px;
+  text-align: center;
+}
+
+th.date {
+  width: 150px;
+  text-align: center;
+}
+
+th.status {
+  width: 200px;
+  text-align: center;
+} */
+
+/* Table cell styles */
+.booking-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Align cells with their headers */
+.booking-table tbody td:nth-child(1) {
+  /* Booking ID column */
+  text-align: center;
+  width: 150px;
+}
+
+.booking-table tbody td:nth-child(2) {
+  /* Customer Name column */
+  text-align: center;
+  width: 200px;
+}
+
+.booking-table tbody td:nth-child(3) {
+  /* Phone column */
+  text-align: center;
+  width: 150px;
+}
+
+.booking-table tbody td:nth-child(4) {
+  /* Email column */
+  text-align: center;
+  width: 250px;
+}
+
+.booking-table tbody td:nth-child(5) {
+  /* Persons column */
+  text-align: center;
+  width: 100px;
+}
+
+.booking-table tbody td:nth-child(6) {
+  /* Date column */
+  text-align: center;
+  width: 150px;
+}
+
+.booking-table tbody td:nth-child(7) {
+  /* Status column */
+  text-align: center;
+  width: 200px;
+}
+
+/* Status badge styles */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.status-badge.confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Empty state message */
+.no-bookings {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Hover effect for better UX */
+.booking-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease;
+}
+
+/* Vô hiệu hóa tất cả hover effects */
+.booking-table tbody tr:hover,
+.booking-table tbody tr:hover td,
+.booking-table tr:hover,
+.booking-table td:hover,
+.booking-table th:hover {
+  background-color: transparent !important;
+  background: none !important;
+}

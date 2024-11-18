@@ -1,0 +1,103 @@
+/* AddDishes */
+
+@import url("https://fonts.googleapis.com/css2?family=Inknut Antiqua:wght@400&display=swap");
+
+p {
+  margin: 0;
+}
+
+.frame-151 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1440px;
+  height: 880px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.72);
+}
+.frame-113 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  padding: 50px 111px 50px 140px;
+  box-sizing: border-box;
+  background-color: rgba(245, 245, 245, 1);
+}
+.frame-149 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 121px 21px 59px 19px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+}
+.group-4507 {
+  width: 100%;
+  height: 390px;
+}
+
+.group-083 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.group-45071 {
+  width: 190px;
+  height: 100%;
+  padding: 35px 48px;
+  border: 10px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  background: linear-gradient(
+      0deg,
+      rgba(192, 139, 139, 0.81),
+      rgba(192, 139, 139, 0.81)
+    ),
+    url(https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/3ymky34f8k1-536%3A492?alt=media&token=c1273983-510b-4444-b025-c315e9ff6e93);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    10px 5px 4px rgba(255, 255, 255, 1);
+}
+.delete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-family: Inknut Antiqua, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.group-4508 {
+  width: 190px;
+  height: 100%;
+  padding: 35px 46px;
+  border: 10px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  background: linear-gradient(
+      0deg,
+      rgba(192, 139, 139, 0.81),
+      rgba(192, 139, 139, 0.81)
+    ),
+    url(https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/3ymky34f8k1-536%3A495?alt=media&token=8fd9cf83-bccd-4e42-9ef8-a4c3683737c7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    10px 5px 4px rgba(255, 255, 255, 1);
+}
+.cancel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-family: Inknut Antiqua, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1.8px;
+}

@@ -1,0 +1,307 @@
+/* Booking table */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish Grover:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
+p {
+  margin: 0;
+}
+
+.booking-table {
+  position: relative;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1920px;
+  height: 2200px;
+  border: 10px solid rgba(245, 245, 245, 1);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.return {
+  position: absolute;
+  top: 106px;
+  left: 1539.89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 30px;
+  line-height: 150%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.group-4497 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 260px;
+  box-sizing: border-box;
+}
+
+.frame-47 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 90px 25px;
+  border: 10px solid rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+}
+
+.frame-67 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 56px 125px 49px 34px;
+  box-sizing: border-box;
+}
+
+.dall-e20241018233857-arestaurant-logo-featuring-the-name-the-boy-sthe-design-should-have-amodern-and-elegant-style-with-aclean-minimalistic-look-the-logo-should-i {
+  width: 40px;
+  height: 100%;
+}
+
+.the-boy-s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 30px;
+  margin-left: 30px;
+
+
+  line-height: 80%;
+  font-family: Irish Grover, display;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  ;
+}
+
+.frame-46 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 5px 12px 45px 50px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(255, 255, 255, 1);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.booktable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.pencil-change-edit-modify-pencil-write-writing {
+  width: 50px;
+  height: 100%;
+}
+
+.frame-68 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 28px 73px 67px 111px;
+  box-sizing: border-box;
+}
+
+.group-4500 {
+  width: 105px;
+  height: 100%;
+  padding: 31px 18px 29px;
+  box-sizing: border-box;
+  background-color: rgba(244, 157, 17, 1);
+}
+
+.return-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.user-circle-single-circle-geometric-human-person-single-user {
+  width: 40px;
+  height: 40px;
+  margin-left: 900px;
+
+}
+
+.group-328 {
+  position: absolute;
+  top: 322px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 1878px;
+  box-sizing: border-box;
+}
+
+.group-520 {
+  width: fit-content;
+  height: 1368px;
+  padding: 154px 148px 430px 163px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.group-52 {
+  width: 979px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.group-191 {
+  width: 200px;
+  height: 10%;
+
+  border: 10px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.81);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    10px 5px 4px rgba(255, 255, 255, 1);
+}
+
+.confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.frame-69 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.group-478 {
+  width: 638px;
+  height: 100%;
+  padding: 110px 167px 355px 143px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.31);
+}
+
+.the-boys-restaurant-the {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.group-1042 {
+  width: 638px;
+  height: 100%;
+  padding: 129px 220px 336px 219px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.thong-tin-nha-hang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
+
+.group-315 {
+  width: 638px;
+  height: 100%;
+  padding: 143px 239px 367px 260px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lien-he-ho-tro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(245, 245, 245, 1);
+  font-size: 24px;
+  line-height: 188%;
+  font-family: Instrument Serif, serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2.4px;
+}
